@@ -1,4 +1,4 @@
-# get_storage_plus
+# Get Storage Plus Dev
 
 A fast, lightweight, and synchronous key-value storage solution for Flutter applications with enhanced Flutter Web support and compatibility for the latest Flutter versions.
 Written entirely in Dart and seamlessly integrated with the GetX framework, get_storage_plus provides high-performance local storage with automatic disk backup after every operation.
@@ -49,7 +49,15 @@ Stable session and cache management
 
 dependencies:
   get_storage_plus: latest_version
+
   
+- Step 1:
+  Add "Get" before your MaterialApp, turning it into GetMaterialApp
+
+```dart
+void main() => runApp(GetMaterialApp(home: Home()));
+```
+
 ## 🛠 Initialization
 
 void main() async {
