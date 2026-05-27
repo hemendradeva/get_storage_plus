@@ -77,24 +77,10 @@ class StorageImpl {
   }
 
   Future<void> _readFromStorage() async {
-    // Iterate over localStorage to find the key you want
-    for (int i = 0; i < html.window.localStorage.length; i++) {
-      final key = html.window.localStorage.key(i);
-
-      // If key is null, handle it accordingly (e.g., log a warning)
-      if (key == null) {
-        print("Warning: localStorage key at index $i is null.");
-        continue;  // Skip this iteration, or you could break if needed
-      }
-
-      // Now key is non-null, safely compare with fileName
-      if (key == fileName) {
-        final value = html.window.localStorage[key];
-        if (value != null) {
-          subject.value = json.decode(value) as Map<String, dynamic>;
-        }
-        break;
-      }
+    // Read the stored value directly by filename (avoids using Storage.key)
+    final value = html.window.localStorage[fileName];
+    if (value != null) {
+      subject.value = json.decode(value) as Map<String, dynamic>;
     }
 
     // If no value found or subject is empty, write default data
