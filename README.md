@@ -39,3 +39,32 @@ Faster web state persistence
 Reduced Dart web storage issues
 Improved compatibility with latest Flutter Web rendering
 Stable session and cache management
+
+Installation
+dependencies:
+  get_storage_plus: latest_version
+🛠 Initialization
+void main() async {
+  await GetStorage.init();
+  runApp(MyApp());
+}
+💡 Basic Usage
+final box = GetStorage();
+
+box.write('name', 'Hemendra');
+box.write('isLogin', true);
+
+String? name = box.read('name');
+bool isLogin = box.read('isLogin') ?? false;
+🎯 Perfect For
+Flutter Web applications
+Admin dashboards
+CRM/ERP systems
+Offline storage
+Authentication sessions
+App settings and preferences
+Lightweight local caching
+
+❤️ Built With Flutter & GetX
+
+Designed for developers who want simple, fast, and reliable local storage for modern Flutter applications.
