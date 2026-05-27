@@ -1,8 +1,7 @@
 import 'dart:async';
 import 'dart:convert';
 // ignore: avoid_web_libraries_in_flutter
-// import 'dart:html' as html;
-import 'package:web/web.dart' as html;
+import 'dart:html' as html;
 import '../value.dart';
 
 class StorageImpl {
