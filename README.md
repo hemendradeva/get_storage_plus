@@ -1,9 +1,9 @@
 # get_storage_plus
-A fast, lightweight, and synchronous key-value storage solution for Flutter applications with enhanced Flutter Web support and compatibility for the latest Flutter versions.
 
+A fast, lightweight, and synchronous key-value storage solution for Flutter applications with enhanced Flutter Web support and compatibility for the latest Flutter versions.
 Written entirely in Dart and seamlessly integrated with the GetX framework, get_storage_plus provides high-performance local storage with automatic disk backup after every operation.
 
-Supports:
+## Supports:
 
 Android
 iOS
@@ -12,7 +12,9 @@ Windows
 macOS
 Linux
 Fuchsia
-✨ Features
+
+## ✨ Features
+
 Ultra-fast in-memory storage
 Automatic persistent disk backup
 Optimized for Flutter Web
@@ -22,14 +24,17 @@ Synchronous read/write operations
 Lightweight and easy to use
 Seamless GetX integration
 No native platform code required
-📦 Supported Data Types
+
+## 📦 Supported Data Types
+
 String
 int
 double
 bool
 Map
 List
-🚀 Flutter Web Enhancements
+
+## 🚀 Flutter Web Enhancements 
 
 This package includes updates specifically designed for Flutter Web applications:
 
@@ -40,15 +45,20 @@ Reduced Dart web storage issues
 Improved compatibility with latest Flutter Web rendering
 Stable session and cache management
 
-Installation
+## Installation
+
 dependencies:
   get_storage_plus: latest_version
-🛠 Initialization
+  
+## 🛠 Initialization
+
 void main() async {
   await GetStorage.init();
   runApp(MyApp());
 }
-💡 Basic Usage
+
+## 💡 Basic Usage
+
 final box = GetStorage();
 
 box.write('name', 'Hemendra');
@@ -56,7 +66,9 @@ box.write('isLogin', true);
 
 String? name = box.read('name');
 bool isLogin = box.read('isLogin') ?? false;
-🎯 Perfect For
+
+## 🎯 Perfect For
+
 Flutter Web applications
 Admin dashboards
 CRM/ERP systems
@@ -65,6 +77,6 @@ Authentication sessions
 App settings and preferences
 Lightweight local caching
 
-❤️ Built With Flutter & GetX
+## ❤️ Built With Flutter & GetX
 
 Designed for developers who want simple, fast, and reliable local storage for modern Flutter applications.
