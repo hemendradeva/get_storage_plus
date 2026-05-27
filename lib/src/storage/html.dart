@@ -1,12 +1,13 @@
 import 'dart:async';
 import 'dart:convert';
 // ignore: avoid_web_libraries_in_flutter
-import 'dart:html' as html;
+// Conditional import: use real `dart:html` on web, otherwise use a small stub
+import 'html_stub.dart' if (dart.library.html) 'html_web.dart' as html;
 import '../value.dart';
 
 class StorageImpl {
   StorageImpl(this.fileName, [this.path]);
-  html.Storage get localStorage => html.window.localStorage;
+  dynamic get localStorage => html.window.localStorage;
 
   final String? path;
   final String fileName;
