@@ -1,8 +1,8 @@
-# Get Storage Plus
+# Get Storage Plus Dev
 
 > 🚀 A modern, lightweight, and high-performance local key-value storage solution for Flutter, built as an enhanced alternative to `get_storage`.
 
-`get_storage_plus` is a pure Dart storage library that provides **fast synchronous reads**, **automatic persistence**, and **improved Flutter Web compatibility** while remaining fully compatible with the GetX ecosystem.
+`get_storage_plus_dev` is a pure Dart storage library that provides **fast synchronous reads**, **automatic persistence**, and **improved Flutter Web compatibility** while remaining fully compatible with the GetX ecosystem.
 
 Designed for modern Flutter applications, it delivers a simple API with reliable local storage across **Android, iOS, Web, Windows, macOS, Linux, and Fuchsia**.
 
@@ -16,11 +16,11 @@ Designed for modern Flutter applications, it delivers a simple API with reliable
 
 ---
 
-## Why Get Storage Plus?
+## Why Get Storage Plus Dev?
 
 The original `get_storage` is an excellent lightweight storage solution. However, many developers have encountered compatibility issues with newer Flutter versions, especially on Flutter Web and during CI/CD deployments.
 
-`get_storage_plus` extends the original concept with improvements focused on:
+`get_storage_plus_dev` extends the original concept with improvements focused on:
 
 - Flutter Web stability
 - Modern Flutter compatibility
@@ -97,7 +97,7 @@ Add the dependency to your `pubspec.yaml`.
 
 ```yaml
 dependencies:
-  get_storage_plus: ^latest_version
+get_storage_plus_dev: ^latest_version
 ```
 
 Then install packages.
@@ -113,18 +113,18 @@ flutter pub get
 Import the package.
 
 ```dart
-import 'package:get_storage_plus/get_storage_plus.dart';
+import 'package:get_storage_plus_dev/get_storage_plus_dev.dart';
 ```
 
 Initialize storage before running your application.
 
 ```dart
 Future<void> main() async {
-  WidgetsFlutterBinding.ensureInitialized();
+WidgetsFlutterBinding.ensureInitialized();
 
-  await GetStorage.init();
+await GetStorage.init();
 
-  runApp(const MyApp());
+runApp(const MyApp());
 }
 ```
 
@@ -148,8 +148,8 @@ box.write('age', 25);
 box.write('loggedIn', true);
 
 box.write('profile', {
-  "name": "Ahmed",
-  "country": "India"
+"name": "Ahmed",
+"country": "India"
 });
 ```
 
@@ -197,7 +197,7 @@ box.erase();
 
 ```dart
 box.listen(() {
-  print("Storage Updated");
+print("Storage Updated");
 });
 ```
 
@@ -205,10 +205,10 @@ Listen to a specific key.
 
 ```dart
 box.listenKey(
-  'username',
-  (value) {
-    print(value);
-  },
+'username',
+(value) {
+print(value);
+},
 );
 ```
 
@@ -232,7 +232,7 @@ box.getValues();
 
 # Flutter Web Improvements
 
-`get_storage_plus` includes several improvements specifically focused on Flutter Web development.
+`get_storage_plus_dev` includes several improvements specifically focused on Flutter Web development.
 
 ### Improved Browser Storage
 
@@ -345,7 +345,7 @@ get_storage:
 with
 
 ```yaml
-get_storage_plus:
+get_storage_plus_dev:
 ```
 
 The API is intentionally designed to remain familiar, minimizing changes to existing code.
@@ -368,7 +368,7 @@ This project is released under the MIT License.
 
 # Acknowledgements
 
-`get_storage_plus` builds upon the ideas introduced by the GetX ecosystem while focusing on improving compatibility and developer experience for modern Flutter applications.
+`get_storage_plus_dev` builds upon the ideas introduced by the GetX ecosystem while focusing on improving compatibility and developer experience for modern Flutter applications.
 
 Special thanks to the Flutter and GetX communities for their continued support and contributions.
 
